@@ -1,7 +1,8 @@
 # CountSeeds
 R script for counting seeds as fertile or infertile. To use, copy the script into the same directory as the seed jpeg images. Open R and type 
 source("CountSeeds_A_03.02.R")
-and follow the prompts. Note that while the script should run in Rstudio and bare R in Linux (tested in Debian 6.11.2-amd64) and Windows (tested in Windows 10), it DOES NOT work on Mac.
+and follow the prompts. 
+Note that while the script should run in Rstudio and bare R in Linux (tested in Debian 6.11.2-amd64) and Windows (tested in Windows 10), it DOES NOT work on Mac.
 
 Keyboard bindings to use while the script is running:
 Enter - image complete/done, go to next image
