@@ -369,7 +369,7 @@ switch_debugging <- function () {
       xx <- sample_img_files[[curr_sample]]$CoordX[sel_ids]
       yy <- sample_img_files[[curr_sample]]$CoordY[sel_ids]
       pt <- as.integer(sample_img_files[[curr_sample]]$IsGood[sel_ids])+1
-      cl <- c("red","green")[pt]
+      cl <- c("red","blue")[pt]
       pc <- c(4,3)[pt]
       points (xx,yy,pch=pc,col=cl)
     }
@@ -524,7 +524,7 @@ switch_debugging <- function () {
       buttons <- 2
    }
 
-    Colour <- switch (buttons+1, "green", NULL, "red")
+    Colour <- switch (buttons+1, "blue", NULL, "red")
     if (is.null(Colour)) {return()}
     Sym <- switch (buttons+1, 3, NULL, 4)
     IsOK <- switch (buttons+1, TRUE, NULL, FALSE)
@@ -532,7 +532,7 @@ switch_debugging <- function () {
 #    write (concat(curr_sample,",",curr_file,",",x,",",y,",",buttons,",",Colour),file="seedcount-data",append=TRUE) # for testing purposes only
     # Plotting point, test to make sure it's within the image itself before plotting and recording!
     if(0 <= getX(x) & getX(x) <= curr_jpg_dim[2] & 0 <= getY(y) & getY(y) <= curr_jpg_dim[1]) {
-        points (getX(x),getY(y),pch=Sym,col=Colour)
+        points (getX(x),getY(y),pch=Sym,col=Colour,cex=1.5)
     # Recording point
         sample_img_files[[Smp]]$NCounts <<- sample_img_files[[Smp]]$NCounts+1
         sample_img_files[[Smp]]$CoordX  <<- c(sample_img_files[[Smp]]$CoordX,getX(x))
