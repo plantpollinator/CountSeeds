@@ -1,9 +1,9 @@
 # CountSeeds
 R script written for counting orchid seeds as fertile or infertile from microscopy images, but could be used for other similar purposes (e.g. counting birds in a field from images). This is released under the Artistic License 2.0 (https://opensource.org/license/artistic-2-0), please see the LICENSE for details.
 
-To use, copy the script into the same directory as the JPEG images you wish to score and ensure that the ```jpeg``` library is installed in your R library. Open R and type 
+To use, copy the script into the same directory as the JPEG images you wish to score and ensure that the ```jpeg``` library is installed in your R library. We recommend that JPEG images are saved with filenames of the following format: ```SAMPLENAME-SAMPLENUMBER.jpg```, e.g. ```DAV22W-01.jpg```. Open R and type 
 ```source("CountSeeds_A_03.02.R")```
-and begin scoring images. A left mouse click will mark a fertile seed with a blue cross, a right mouse click an infertile seed with a red x. Keyboard bindings are below (e.g. 'x' or 'Delete' will delete the last point clicked). 
+and begin scoring images. A left mouse click will mark a fertile seed with a blue cross, a right mouse click an infertile seed with a red x. Keyboard bindings are below (e.g. 'x' or 'Delete' will delete the last point clicked). Once done scoring an image, hit 'Enter' to move to the next image and continue scoring. 
 
 Note that while the script should run in Rstudio and bare R in Linux (tested in Debian 6.11.2-amd64) and Windows (tested in Windows 10), it DOES NOT work on Mac (it has debugging-resistant issues detecting the mouse buttons properly, alas).
 
