@@ -1,11 +1,13 @@
 # CountSeeds
-R script for counting seeds as fertile or infertile. This is released under the Artistic License 2.0 (https://opensource.org/license/artistic-2-0), which is not listed by GitHub, rather than the listed MIT License.
+R script written for counting orchid seeds as fertile or infertile from microscopy images, but could be used for other similar purposes (e.g. counting birds in a field from images). This is released under the Artistic License 2.0 (https://opensource.org/license/artistic-2-0), please see the LICENSE for details.
 
-To use, copy the script into the same directory as the seed jpeg images. Open R and type 
+To use, copy the script into the same directory as the JPEG images you wish to score and ensure that the ```jpeg``` library is installed in your R library. Open R and type 
 ```source("CountSeeds_A_03.02.R")```
 and follow the prompts. 
 
 Note that while the script should run in Rstudio and bare R in Linux (tested in Debian 6.11.2-amd64) and Windows (tested in Windows 10), it DOES NOT work on Mac (it has debugging-resistant issues detecting the mouse buttons properly, alas).
+
+For each sample (each individual seed was collected from), the software aims to have the user score 100 seeds minimum for fertility before moving on to the next sample; it will automatically move on at 150 seeds scored. These values can be modified within the script. It is strongly suggested that you write the summary report using the ```w``` keybinding at the end of each session, and end a session at the end of a sample so as to not lose track of where you were. The summary reports (TSV files) contain the sample name, proportion of good seeds, number of seeds scored, and number of images scored, and are named uniquely with a time and date stamp to avoid overwriting of data.
 
 Keyboard bindings to use while the script is running:
 
