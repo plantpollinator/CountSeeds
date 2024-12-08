@@ -1,5 +1,5 @@
 # CountSeeds
-R script for counting seeds as fertile or infertile. This is released under the Artistic License 2.0 (https://opensource.org/license/artistic-2-0).
+R script for counting seeds as fertile or infertile. This is released under the Artistic License 2.0 (https://opensource.org/license/artistic-2-0), which is not listed by GitHub, rather than the listed MIT License.
 
 To use, copy the script into the same directory as the seed jpeg images. Open R and type 
 ```source("CountSeeds_A_03.02.R")```
